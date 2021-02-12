@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Princess Sofia" rel="stylesheet" type="text/css"> 
+    <link rel="stylesheet" href="style.css">  
+    <title>fcc:OurBakery</title>
+</head>
+<body>
+    <div class="box">
+        <header class="header">
+            <h1 id="title" class="text-center">
+                <b><span class="text-OurBakery size-large-OurBakery">OurBakery</span></b>
+            </h1>
+            <h1 id="title" class="text-center">
+                <b><span class="text-SurveyForm">Survey Form</span></b>
+            </h1>
+            <p id="description" class="description text-center text-black">
+                <b>We are always creating and baking delicious products at  <span class="text-OurBakery size-small-OurBakery">OurBakery</span> for you. We thank you for taking the time to help us answer this survey.</b>
+            </p>
+            <p class="description text-center text-black">
+                <b> That will smell good and will have a spectacular taste!</b>
+            </p>
+        </header>
+  
+        <form id="survey-form">
+            <p class="size-small-RequiredField"> * Denotes required field. </p>
+            <div class="field-information">
+                <label id="name-label" for="name">Name *</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="field-control"
+                    placeholder="Enter your name"
+                    required
+                />
+            </div>
+            <div class="field-information">
+                <label id="email-label" for="email">Email *</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="field-control"
+                    placeholder="Enter your email"
+                    required
+                />
+            </div>
+            <div class="field-information">
+                <label id="phone-label" for="email">Phone number<span class="tip"> (format: 123-456-7890)</span></label>
+                <input           
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    class="field-control"
+                    placeholder="Enter your phone number (optional)"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                />
+            </div>
+            <div class="field-information">
+                <label id="number-label" for="number">Age</label>
+                <input
+                    type="number"
+                    name="age"
+                    id="number"
+                    min="10"
+                    max="99"
+                    class="field-control"
+                    placeholder="Enter your age (optional)"
+                />
+            </div>
+            <div class="field-information">
+                <p>Gender</p>
+                <label class="container">
+                    <input name="gender" value="male" type="radio"/>
+                    <span class="radiomark"></span>
+                    Male
+                </label>
+    
+                <label  class="container">
+                    <input name="gender" value="female" type="radio"/>        
+                    <span class="radiomark"></span>
+                    Female
+                </label>
+    
+                <label  class="container">
+                    <input name="gender" value="other" type="radio" checked/>        
+                    <span class="radiomark"></span>
+                    Prefer not to say
+                </label>
+            </div>
+    
+            <div class="field-information">
+                <p>What is the best option that describes your consumption in our bakery? *</p>
+                <select id="dropdown" name="consumption" class="field-control" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="bread">Artisan breads</option>
+                    <option value="cake">Cakes, Cookies and Desserts</option>
+                    <option value="dairy">Dairy</option>
+                    <option value="drink">Drinks</option>
+                    <option value="frozen">Frozen products</options>
+                    <option value="supplier">Supplier products</options>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="field-information">
+                <p>How likely are you to buy our products through "OurBakery" online?</p>
+                <label class="container">
+                    <input name="online" value="definitely" type="radio"/>
+                    <span class="radiomark"></span>
+                    Definitely
+                </label>
+                <label class="container">
+                    <input name="online" value="maybe" type="radio"/>
+                    <span class="radiomark"></span>
+                    Maybe
+                </label>
+                <label class="container">
+                    <input name="online" value="not-sure" type="radio" checked/>
+                    <span class="radiomark"></span>
+                    Not sure
+                </label>
+            </div>
+
+            <div class="field-information">
+                <p>How would you like to get your purchases made online?</p>
+                <label class="container">
+                    <input name="get-purchases" value="pickup" type="radio"/>
+                    <span class="radiomark"></span>
+                    You pickup them
+                </label>
+    
+                <label class="container">
+                    <input name="get-purchases" value="delivery" type="radio"/>
+                    Delivery System (Uber Eats, Skip The Dishes, etc)
+                    <span class="radiomark"></span>
+                </label>
+
+                <label class="container">
+                    <input name="get-purchases" value="not-sure" type="radio" checked/>
+                    <span class="radiomark"></span>
+                    Not sure
+                </label>
+            </div>
+
+            <div class="field-information">
+                <p>What is your favorite way to pay for your purchases? *</p>
+                <select id="payment" name="payment" class="field-control" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="credit">Credit Card</option>
+                    <option value="Debit">Debit Card</option>
+                    <option value="Cash">Cash</option>
+                </select>
+            </div>
+
+            <div class="field-information">
+                <p> What are your favorite social media? (Check all that apply)</p>
+
+                <label class="container">
+                    <input name="media" value="facebook" type="checkbox"/>
+                    <span class="checkmark"></span>
+                    Facebook
+                </label>
+                
+                <label class="container">
+                    <input name="media" value="instagram" type="checkbox"/>
+                    <span class="checkmark"></span>
+                    Instagram
+                </label>
+    
+                <label class="container">
+                    <input name="media" value="pinterest" type="checkbox"/>
+                    <span class="checkmark"></span>
+                    Pinterest
+                </label>
+                    
+                <label class="container">
+                    <input name="media" value="youtube" type="checkbox"/>
+                    <span class="checkmark"></span>
+                    Youtube
+                </label>
+    
+                <label class="container">
+                    <input name="media" value="other" type="checkbox"/>
+                    <span class="checkmark"></span>
+                    Other
+                </label>
+            </div>
+
+            <div class="field-information">
+                <p>In what ways would you like to be contacted? (Check all that apply)</p>
+
+                <label class="container">
+                    <input name="contact" value="email" type="checkbox"/>
+                    <span class="checkmark"></span>
+                    E-mail
+                </label>
+                <label class="container">
+                    <input name="contact" value="sms" type="checkbox"/>
+                    <span class="checkmark"></span>
+                    SMS
+                </label>
+                <label class="container">
+                    <input name="contact" value="messenger" type="checkbox"/>
+                    <span class="checkmark"></span>
+                    Messenger
+                </label>
+                <label class="container">
+                    <input name="contact" value="whatsapp" type="checkbox"/>
+                    <span class="checkmark"></span>
+                    Whatsapp
+                </label>
+                <label class="container">
+                    <input name="contact" value="telegram" type="checkbox"/>
+                    <span class="checkmark"></span>
+                    Telegram
+                </label>
+                <label class="container">
+                    <input name="contact" value="outros" type="checkbox"/>
+                    <span class="checkmark"></span>
+                    Outros
+                </label>
+            </div>
+
+            <div class="field-information">
+                <p>How likely are you to recommend us to a friend or colleague?</p>
+    
+                <label class="container">
+                    <input name="recommend" value="definitely" type="radio"/>
+                    <span class="radiomark"></span>
+                    Definitely
+                </label>
+
+                <label class="container">
+                    <input name="recommend" value="maybe" type="radio"/>
+                    <span class="radiomark"></span>
+                    Maybe
+                </label>
+
+                <label class="container">
+                    <input name="recommend" value="not-sure" type="radio" checked/>
+                    <span class="radiomark"></span>
+                    Not sure
+                </label>
+                </div>
+
+                <div class="field-information">
+                    <p>What is your overall satisfaction with Our Bakery? </p>
+                    <p class="size-small-RequiredField">
+                        1-Very  dissatisfied  |  2-Dissatisfied  |  3-Neutral  |   4-Satisfied  |  5-Very satisfied
+                    </p>
+                    <input type="range" class="size-range" list="marks" name="satisfaction" min="1" max="5" value="3" step="1">
+                    <datalist class="range-list" id="marks">
+                        <option value="1" label="1"></option>
+                        <option value="2" label="2"></option>
+                        <option value="3" label="3"></option>
+                        <option value="4" label="4"></option>
+                        <option value="5" label="5"></option>
+                    </datalist>
+                </div>
+
+                <div class="field-information">
+                    <p>Your comment or suggestion is very important to us.</p> 
+                    <p>Please let us know what you think about "OurBakery". Thank you.</p>
+                    <textarea
+                        id="comments"
+                        class="input-textarea"
+                        name="comment"
+                        placeholder="Enter your comment here..."
+                    ></textarea>
+                </div>
+
+                <div class="information">
+                    <button type="submit" id="submit" class="submit-button">
+                        Submit
+                    </button>
+                </div>
+                
+            </div>
+        </form>
+
+        <footer>    
+            <div class="col-coded-eluh">
+                <div class="col-coded-by">
+                    <h2>Coded by</h2>
+                </div>
+                <div class="col-coded-sign">
+                    <h2> eLuh!<h2>
+                </div>
+            </div>
+        </footer>
+    </div>    
+</body>
+</html>
