@@ -1,0 +1,390 @@
+:root {
+    --color-white: #f3f3f3;
+    --color-black: #000000;
+    --color-light-gray: #bebebe;
+    --color-dark-gray: #8e8e8e;
+    --color-dodger-blue: #2196F3;
+    --color-dark-blue: #1b1b32;
+    --color-dark-blue-alpha: rgba(27, 27, 50, 0.8);
+    --color-light-yellow: #E1D2BB;
+    --color-tuna: #495057;
+    --color-purple: #51025b;
+    --color-red: #ff0000;
+    --color-green: #9ae2b3;
+  }
+  
+  body {
+    font-family: arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-white);
+    margin: 0;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-dark-blue);
+    background-image: url(https://eluizatsuda.github.io/photo-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  form {
+    background: var(--color-dark-blue-alpha);
+    padding: 2.5rem 0.625rem 2.0rem 2.5rem;
+    border-radius: 0.5rem;
+  }
+  h1 {
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-black);
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  
+  h1,
+  p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  input,
+  button,
+  select,
+  textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  
+  button {
+    border: none;
+  }
+  
+  .box {
+    width: 100%;
+    margin: 1.5rem auto 1.5rem auto;
+    background-image: 
+        linear-gradient(
+            115deg,
+           rgba(192,192,192,0.2), 
+           rgba(136, 136, 206, 0.5)),
+            url(https://eluizatsuda.github.io/photo-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @media (min-width: 576px) {
+    .box {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 770px) {
+    .box {
+      max-width: 750px;
+    }
+  }
+  
+  .header {
+    padding: 0 0.625rem;
+    margin-bottom: 1.875rem;
+  }
+  
+  .description {
+    font-style: italic;
+    font-weight: 200;
+  }
+  
+  .field-information {
+    margin: 0 auto 1.25rem 0;
+    padding: 0.95rem 2rem 0.95rem 0.95rem;
+  }
+  
+  .field-control {
+    color: var(--color-tuna);
+    background-color: var(--color-light-yellow);
+    background-clip: padding-box;
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.2rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .field-control:focus {
+    border-color: var(--color-green);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* <<<<< Alignments and different sizes and colors >>>>> */
+  .text-center {
+    text-align: center;
+  }
+  .text-black {
+    color: var(--color-black); 
+  }
+  
+  .text-OurBakery {
+    font-family: Princess Sofia;
+    color: var(--color-red); 
+  }
+  .size-small-OurBakery {
+    font-size: 1.7rem;
+  }
+  .size-large-OurBakery {
+    font-size: 5rem;
+  }
+  @media (max-width: 500px) {
+    .size-large-OurBakery  {
+      font-size: 3.5rem;
+    }
+  }
+  
+  .text-SurveyForm {
+    font-size: 2rem;
+  }
+  @media (max-width: 320px) {
+    .text-SurveyForm {
+      font-size: 1.5rem;
+    }
+  }
+  .size-small-RequiredField {
+    color: var(--color-light-gray);
+    font-size: 0.8rem;
+  }
+  .tip {
+    margin-left: 0.25rem;
+    font-size: 0.9rem;
+    color: var(--color-light-gray);
+  }
+  
+  /* <<<<< checkbox/radiobox container >>>>> */
+  .input-radio,
+  .input-checkbox {
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+  }
+  .container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    /* Prevent text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* >>>>> Create a custom checkbox <<<<< */
+  .checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background: var(--color-light-gray);
+    border-radius: 2px;
+  }
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background: var(--color-dark-gray);
+  }
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: var(--color-dodger-blue);
+  }
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  /* >>>>> Create a custom radio button <<<<< */
+  .radiomark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: var(--color-light-gray);
+    border-radius: 50%;
+  }
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .radiomark {
+    background: var(--color-dark-gray);
+  }
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .radiomark {
+    background-color: var(--color-dodger-blue);
+  }
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .radiomark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .radiomark:after {
+    display: block;
+  }
+  /* Style the indicator (dot/circle) */
+    .container .radiomark:after {
+        top: 6.5px;
+        left: 6.5px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--color-white);
+  }
+  
+  /* >>>>> Customer Satisfaction Ruler <<<<< */
+  .size-range {
+    height: 4px;
+    width: 650px;
+  }
+  @media (max-width: 770px) {
+    .size-range {
+      width: 450px;
+    }
+  }
+  @media (max-width: 500px) {
+    .size-range {
+      width: 390px;
+    }
+  }
+  @media (max-width: 430px) {
+    .size-range {
+      width: 320px;
+    }
+  }
+  @media (max-width: 380px) {
+    .size-range  {
+     width: 270px;
+    }
+  }
+  @media (max-width: 325px) {
+    .size-range  {
+     width: 210px;
+    }
+  }
+  .range-list {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+  
+  /* >>>>> Suggestion Field and Submit Button <<<<< */
+  .input-textarea {
+    min-height: 120px;
+    width: 100%;
+    padding: 0.625rem 0rem;
+    resize: vertical;
+    border-radius: 4px;
+    background: var(--color-light-yellow); 
+  }
+  .submit-button {
+    display: block;
+    width: 93%;
+    margin-left: 17px;
+    padding: 0.75rem;
+    background: var(--color-green);
+    color: var(--color-black);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  @media (max-width: 770px) {
+    .submit-button {
+     width: 90%;
+    }
+  }
+  @media (max-width: 415px) {
+    .submit-button {
+     width: 85%;
+    }
+  }
+  @media (max-width: 325px) {
+    .submit-button {
+     width: 80%;
+    }
+  }
+  
+  /* >>>>> Footer - coded by eluh! <<<<< */
+  footer {
+    background-color: var(--color-light-yellow);
+    color:var(--color-black);
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    height: 36px;
+    font-size: 9px;
+  }
+  .col-coded-eluh {
+    width: 150px;
+    height: 35px;
+    display: flex;
+  }
+  .col-coded-by {
+    margin: 0px auto 0px 10px;
+    width: 170px;
+  }
+  .col-coded-sign {
+    margin: -18px auto 0px 2px;
+    color: var(--color-purple);
+    font-family: Princess Sofia, Calibri;
+    font-size: 16px;
+    width: 160px;
+    height: 55px;
+  }  
+  
