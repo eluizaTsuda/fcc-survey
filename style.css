@@ -31,7 +31,7 @@
     width: 100%;
     z-index: -1;
     background: var(--color-dark-blue);
-    background-image: url(https://eluizatsuda.github.io/photo-background.jpg);
+    background-image: url(https://eluizatsuda.github.io/image/survey-ourbakery/photo-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -87,7 +87,7 @@
             115deg,
            rgba(192,192,192,0.2), 
            rgba(136, 136, 206, 0.5)),
-            url(https://eluizatsuda.github.io/photo-background.jpg);
+            url(https://eluizatsuda.github.io/image/survey-ourbakery/photo-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
